@@ -153,5 +153,5 @@ for APP in "${systemapp[@]}"; do
 done
 
 # Reboot phone
-echo '\nRebooting device'
+echo -e '\nRebooting device'
 adb reboot
