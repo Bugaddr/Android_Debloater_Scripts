@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Note: Enable usb debugging & Disable Permission Monitoring (To clear app data) in setting
 
-user=(
+userapp=(
 	com.block.juggle                          # Block blast
 	com.byjus.thelearningapp                  # Byju
 	com.cardfeed.video_public                 # Public
@@ -25,7 +25,6 @@ user=(
 	com.king.candycrushsaga                   # Candycrush
 	com.linkedin.android                      # Linkedin
 	com.oneplus.brickmode                     # Zen space
-	com.oplus.melody                          # Wireless earphones (firmware updater for realme/oplus earphone)
 	com.opos.cs                               # Hot apps
 	com.os.docvault                           # Realme docvault
 	com.phonepe.app                           # Phonepe
@@ -40,7 +39,7 @@ user=(
 	net.one97.paytm                           # Paytm
 )
 
-system=(
+systemapp=(
 	com.android.bluetoothmidiservice                 # Bluetooth midi service
 	com.android.bookmarkprovider                     # Bookmark Provider
 	com.android.calllogbackup                        # Call log backup/restore
@@ -60,7 +59,6 @@ system=(
 	com.coloros.compass2                             # Compass
 	com.coloros.filemanager                          # Filemanager
 	com.coloros.healthcheck                          # Diagnostics
-	com.coloros.healtservice                         # Healthservice
 	com.coloros.operationManual                      # Help & feedback
 	com.coloros.oshare                               # Realme share
 	com.coloros.phonemanager                         # Phone manager
@@ -76,6 +74,7 @@ system=(
 	com.finshell.fin                                 # Finshell pay
 	com.glance.internet                              # Glance for realme
 	com.google.android.apps.googleassistant          # Google assistant
+	com.google.android.apps.maps                     # Google maps
 	com.google.android.apps.nbu.files                # Google files
 	com.google.android.apps.nbu.paisa.user           # Google pay
 	com.google.android.apps.photos                   # Google photos
@@ -109,9 +108,11 @@ system=(
 	com.oplus.crashbox                               # Crashbox
 	com.oplus.encryption                             # Private safe
 	com.oplus.games                                  # Games
+	com.oplus.healthservice                          # Healthservice
 	com.oplus.lfeh                                   # Oplus LFEHer
 	com.oplus.linker                                 # OPSynergy
 	com.oplus.logkit                                 # Feedback
+	com.oplus.melody                                 # Wireless earphones (firmware updater for realme/oplus earphone)
 	com.oplus.ocloud                                 # Oplus cloud
 	com.oplus.olc                                    # Olc
 	com.oplus.onetrace                               # OneTrace
@@ -136,7 +137,7 @@ system=(
 )
 
 # Debloat user apps
-for APP in "${user[@]}"; do
+for APP in "${userapp[@]}"; do
 	echo -e "\n$APP"
 	adb shell am force-stop --user 0 "$APP"
 	adb shell pm clear --user 0 "$APP"
@@ -144,7 +145,7 @@ for APP in "${user[@]}"; do
 done
 
 # Disable system apps
-for APP in "${system[@]}"; do
+for APP in "${systemapp[@]}"; do
 	echo -e "\n$APP"
 	adb shell pm disable-user --user 0 "$APP"
 	adb shell am force-stop --user 0 "$APP"
@@ -152,4 +153,5 @@ for APP in "${system[@]}"; do
 done
 
 # Reboot phone
+echo '\nRebooting device'
 adb reboot
