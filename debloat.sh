@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Note: Enable usb debugging & Disable Permission Monitoring (To clear app data) in setting
+# This script debloats only for user 0, edit for other user
 
 userapp=(
 	com.block.juggle                          # Block blast
@@ -139,8 +140,6 @@ systemapp=(
 # Debloat user apps
 for APP in "${userapp[@]}"; do
 	echo -e "\n$APP"
-	adb shell am force-stop --user 0 "$APP"
-	adb shell pm clear --user 0 "$APP"
 	adb shell pm uninstall --user 0 "$APP"
 done
 
