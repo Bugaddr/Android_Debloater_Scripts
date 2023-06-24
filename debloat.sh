@@ -115,6 +115,7 @@ system=(
 	com.oplus.ocloud                                 # Oplus cloud
 	com.oplus.olc                                    # Olc
 	com.oplus.onetrace                               # OneTrace
+	com.oplus.pay                                    # Secure payment (Cant uninstall)
 	com.oplus.qualityprotect                         # QualityProtect
 	com.oplus.securitykeyboard                       # Secure keyboard
 	com.oplus.statistics.rom                         # User experience program
@@ -134,10 +135,6 @@ system=(
 	com.wapi.wapicertmanage                          # WAPI certificate
 )
 
-disable=(
-	com.oplus.pay                                     # Secure payment (Cant uninstall)
-)
-
 # Debloat user apps
 for APP in "${user[@]}"; do
 	echo -e "\n$APP"
@@ -146,16 +143,8 @@ for APP in "${user[@]}"; do
 	adb shell pm uninstall --user 0 "$APP"
 done
 
-# Debloat system apps
+# Disable system apps
 for APP in "${system[@]}"; do
-	echo -e "\n$APP"
-	adb shell am force-stop --user 0 "$APP"
-	adb shell pm clear --user 0 "$APP"
-	adb shell pm uninstall --user 0 "$APP"
-done
-
-# Disable apps
-for APP in "${disable[@]}"; do
 	echo -e "\n$APP"
 	adb shell pm disable-user --user 0 "$APP"
 	adb shell am force-stop --user 0 "$APP"
