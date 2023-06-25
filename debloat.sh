@@ -52,6 +52,9 @@ uninstall_system=(
 	com.coloros.phonemanager                # Phone manager
 	com.coloros.video                       # Video
 	com.coloros.weather2                    # Weather
+	com.facebook.appmanager                 # Meta app manager
+	com.facebook.services                   # Meta services
+	com.facebook.system                     # Meta app installer
 	com.finshell.fin                        # Finshell pay
 	com.glance.internet                     # Glance for realme
 	com.google.android.apps.googleassistant # Google assistant
@@ -98,9 +101,6 @@ disable_system=(
 	com.coloros.securepay                            # Payment protection
 	com.coloros.smartsidebar                         # Smart sidebar
 	com.coloros.weather.service                      # Weather service
-	com.facebook.appmanager                          # Meta app manager
-	com.facebook.services                            # Meta services
-	com.facebook.system                              # Meta app installer
 	com.google.android.as                            # Android system intelligence
 	com.google.android.feedback                      # Market feedback agent
 	com.google.android.gms.location.history          # Google location history
