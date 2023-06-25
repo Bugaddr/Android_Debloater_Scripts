@@ -93,11 +93,9 @@ disable_system=(
 	com.android.stk                                  # Sim toolkit
 	com.android.systemui.plugin.globalactions.wallet # Google Wallet toggle in QS
 	com.coloros.activation                           # E-warranty card
-	com.coloros.childrenspace                        # Kid space
 	com.coloros.healthcheck                          # Diagnostics
 	com.coloros.operationManual                      # Help & feedback
 	com.coloros.oshare                               # Realme share
-	com.coloros.scenemode                            # Simple mode
 	com.coloros.securepay                            # Payment protection
 	com.coloros.smartsidebar                         # Smart sidebar
 	com.coloros.weather.service                      # Weather service
