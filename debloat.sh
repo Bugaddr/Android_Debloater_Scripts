@@ -2,6 +2,10 @@
 # Note: Enable usb debugging & Disable Permission Monitoring (To clear app data) in setting
 # This script debloats only for user 0, edit for other user
 
+# Get arguments
+USER_ID="$1"
+
+# App lists
 uninstall_user=(
 	com.block.juggle                          # Block blast
 	com.byjus.thelearningapp                  # Byju
@@ -140,23 +144,23 @@ disable_system=(
 # Uninstall user apps
 for APP in "${uninstall_user[@]}"; do
 	echo -e "\n$APP"
-	adb shell pm uninstall --user 0 "$APP"
+	adb shell pm uninstall --user "$USER_ID" "$APP"
 done
 
 # Uninstall system apps
 for APP in "${uninstall_system[@]}"; do
 	echo -e "\n$APP"
-	adb shell pm uninstall --user 0 "$APP"
+	adb shell pm uninstall --user "$USER_ID" "$APP"
 done
 
 # Disable system apps
 for APP in "${disable_system[@]}"; do
 	echo -e "\n$APP"
-	adb shell pm disable-user --user 0 "$APP"
-	adb shell am force-stop --user 0 "$APP"
-	adb shell pm clear --user 0 "$APP"
+	adb shell pm disable-user --user "$USER_ID" "$APP"
+	adb shell am force-stop --user "$USER_ID" "$APP"
+	adb shell pm clear --user "$USER_ID" "$APP"
 done
 
 # Reboot phone
 echo -e '\nRebooting device'
-#adb reboot
+adb reboot
