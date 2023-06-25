@@ -161,5 +161,4 @@ for APP in "${disable_system[@]}"; do
 done
 
 # Reboot phone
-echo -e '\nRebooting device'
-adb reboot
+echo -e '\nReboot your device'
