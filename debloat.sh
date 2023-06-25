@@ -135,7 +135,6 @@ disable_system=(
 	com.qualcomm.qti.uim                             # R-UIM (Remote sim lock service)
 	com.realme.movieshot                             # Combine captions
 	com.realme.securitycheck                         # Security analysis
-	com.realme.wellbeing                             # Sleep capsule
 	com.ses.entitlement.o2                           # O2 (UK sim)
 	com.tencent.soter.soterserver                    # AIDL server demo
 	com.wapi.wapicertmanage                          # WAPI certificate
