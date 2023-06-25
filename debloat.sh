@@ -2,7 +2,7 @@
 # Note: Enable usb debugging & Disable Permission Monitoring (To clear app data) in setting
 # This script debloats only for user 0, edit for other user
 
-userapp=(
+uninstall_user=(
 	com.block.juggle                          # Block blast
 	com.byjus.thelearningapp                  # Byju
 	com.cardfeed.video_public                 # Public
@@ -40,75 +40,78 @@ userapp=(
 	net.one97.paytm                           # Paytm
 )
 
-systemapp=(
+uninstall_system=(
+	com.android.chrome                      # Google chrome
+	com.coloros.assistantscreen             # Shelf
+	com.coloros.compass2                    # Compass
+	com.coloros.filemanager                 # Filemanager
+	com.coloros.phonemanager                # Phone manager
+	com.coloros.video                       # Video
+	com.coloros.weather2                    # Weather
+	com.finshell.fin                        # Finshell pay
+	com.glance.internet                     # Glance for realme
+	com.google.android.apps.googleassistant # Google assistant
+	com.google.android.apps.maps            # Google maps
+	com.google.android.apps.nbu.files       # Google files
+	com.google.android.apps.nbu.paisa.user  # Google pay
+	com.google.android.apps.photos          # Google photos
+	com.google.android.apps.restore         # Data restore tool
+	com.google.android.apps.wellbeing       # Digital wellbeing
+	com.google.android.calendar             # Google calendar
+	com.google.android.gm                   # Gmail
+	com.google.android.googlequicksearchbox # Google search
+	com.google.android.keep                 # Keep notes
+	com.google.android.youtube              # Youtube
+	com.google.ar.lens                      # Google lens
+	com.heytap.browser                      # Heytap Browser
+	com.heytap.cloud                        # Heytap cloud
+	com.heytap.music                        # Music
+	com.heytap.pictorial                    # Lock screen magazine
+	com.heytap.usercenter                   # My realme
+	com.oplus.games                         # Games
+	com.oplus.themestore                    # Theme store
+	com.oppo.quicksearchbox                 # Global search
+	com.redteamobile.roaming                # ORoaming
+)
+
+disable_system=(
 	com.android.bluetoothmidiservice                 # Bluetooth midi service
 	com.android.bookmarkprovider                     # Bookmark Provider
 	com.android.calllogbackup                        # Call log backup/restore
-	com.android.chrome                               # Google chrome
 	com.android.dreams.basic                         # Basic daydreams
-	com.android.egg                                  # Android easter egg
 	com.android.email.partnerprovider                # Email partner provider
-	com.android.hotwordenrollment.okgoogle           # Google assistant
 	com.android.nfc                                  # NFC Service
 	com.android.providers.partnerbookmarks           # Partner bookmark
 	com.android.stk                                  # Sim toolkit
 	com.android.systemui.plugin.globalactions.wallet # Google Wallet toggle in QS
-	com.android.traceur                              # System tracing
 	com.coloros.activation                           # E-warranty card
-	com.coloros.assistantscreen                      # Shelf
 	com.coloros.childrenspace                        # Kid space
-	com.coloros.compass2                             # Compass
-	com.coloros.filemanager                          # Filemanager
 	com.coloros.healthcheck                          # Diagnostics
 	com.coloros.operationManual                      # Help & feedback
 	com.coloros.oshare                               # Realme share
-	com.coloros.phonemanager                         # Phone manager
 	com.coloros.scenemode                            # Simple mode
 	com.coloros.securepay                            # Payment protection
 	com.coloros.smartsidebar                         # Smart sidebar
-	com.coloros.video                                # Video
 	com.coloros.weather.service                      # Weather service
-	com.coloros.weather2                             # Weather
 	com.facebook.appmanager                          # Meta app manager
 	com.facebook.services                            # Meta services
 	com.facebook.system                              # Meta app installer
-	com.finshell.fin                                 # Finshell pay
-	com.glance.internet                              # Glance for realme
-	com.google.android.apps.googleassistant          # Google assistant
-	com.google.android.apps.maps                     # Google maps
-	com.google.android.apps.nbu.files                # Google files
-	com.google.android.apps.nbu.paisa.user           # Google pay
-	com.google.android.apps.photos                   # Google photos
-	com.google.android.apps.restore                  # Data restore tool
-	com.google.android.apps.wellbeing                # Digital wellbeing
 	com.google.android.as                            # Android system intelligence
-	com.google.android.calendar                      # Google calendar
 	com.google.android.feedback                      # Market feedback agent
-	com.google.android.gm                            # Gmail
 	com.google.android.gms.location.history          # Google location history
-	com.google.android.googlequicksearchbox          # Google search
-	com.google.android.keep                          # Keep notes
 	com.google.android.marvin.talkback               # Android accessiblity suite
 	com.google.android.onetimeinitializer            # Google one time init
 	com.google.android.partnersetup                  # Google partner setup
 	com.google.android.printservice.recommendation   # Print service recommendation service
 	com.google.android.projection.gearhead           # Android auto
 	com.google.android.setupwizard                   # Android setup
-	com.google.android.youtube                       # Youtube
-	com.google.ar.lens                               # Google lens
 	com.heytap.accessory                             # Quick device connect
-	com.heytap.browser                               # Heytap Browser
-	com.heytap.cloud                                 # Heytap cloud
 	com.heytap.mcs                                   # System messages
-	com.heytap.music                                 # Music
-	com.heytap.pictorial                             # Lock screen magazine
-	com.heytap.usercenter                            # My realme
 	com.mediatek.omacp                               # Omacp
 	com.oplus.apprecover                             # Recover system app
 	com.oplus.cosa                                   # App enhancement service
 	com.oplus.crashbox                               # Crashbox
 	com.oplus.encryption                             # Private safe
-	com.oplus.games                                  # Games
 	com.oplus.healthservice                          # Healthservice
 	com.oplus.lfeh                                   # Oplus LFEHer
 	com.oplus.linker                                 # OPSynergy
@@ -122,29 +125,32 @@ systemapp=(
 	com.oplus.securitykeyboard                       # Secure keyboard
 	com.oplus.statistics.rom                         # User experience program
 	com.oplus.synergy                                # HeySynergy
-	com.oplus.themestore                             # Theme store
 	com.oplus.wifibackuprestore                      # Wifi backup/restore
-	com.oppo.quicksearchbox                          # Global search
 	com.qualcomm.atfwd                               # ATFWD (AT commands)
 	com.qualcomm.embms                               # EMBMS (LTE broadcasr)
 	com.qualcomm.qti.uim                             # R-UIM (Remote sim lock service)
 	com.realme.movieshot                             # Combine captions
 	com.realme.securitycheck                         # Security analysis
 	com.realme.wellbeing                             # Sleep capsule
-	com.redteamobile.roaming                         # ORoaming
 	com.ses.entitlement.o2                           # O2 (UK sim)
 	com.tencent.soter.soterserver                    # AIDL server demo
 	com.wapi.wapicertmanage                          # WAPI certificate
 )
 
-# Debloat user apps
-for APP in "${userapp[@]}"; do
+# Uninstall user apps
+for APP in "${uninstall_user[@]}"; do
+	echo -e "\n$APP"
+	adb shell pm uninstall --user 0 "$APP"
+done
+
+# Uninstall system apps
+for APP in "${uninstall_system[@]}"; do
 	echo -e "\n$APP"
 	adb shell pm uninstall --user 0 "$APP"
 done
 
 # Disable system apps
-for APP in "${systemapp[@]}"; do
+for APP in "${disable_system[@]}"; do
 	echo -e "\n$APP"
 	adb shell pm disable-user --user 0 "$APP"
 	adb shell am force-stop --user 0 "$APP"
@@ -153,4 +159,4 @@ done
 
 # Reboot phone
 echo -e '\nRebooting device'
-adb reboot
+#adb reboot
