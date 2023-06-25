@@ -64,6 +64,7 @@ uninstall_system=(
 	com.google.android.calendar             # Google calendar
 	com.google.android.gm                   # Gmail
 	com.google.android.googlequicksearchbox # Google search
+	com.google.android.projection.gearhead  # Android auto
 	com.google.android.keep                 # Keep notes
 	com.google.android.youtube              # Youtube
 	com.google.ar.lens                      # Google lens
@@ -107,7 +108,6 @@ disable_system=(
 	com.google.android.onetimeinitializer            # Google one time init
 	com.google.android.partnersetup                  # Google partner setup
 	com.google.android.printservice.recommendation   # Print service recommendation service
-	com.google.android.projection.gearhead           # Android auto
 	com.google.android.setupwizard                   # Android setup
 	com.heytap.accessory                             # Quick device connect
 	com.heytap.mcs                                   # System messages
