@@ -77,6 +77,7 @@ uninstall_system=(
 	com.heytap.pictorial                    # Lock screen magazine
 	com.heytap.usercenter                   # My realme
 	com.oplus.games                         # Games
+	com.oplus.melody                        # Wireless earphones (firmware updater for realme/oplus earphone)
 	com.oplus.themestore                    # Theme store
 	com.oppo.quicksearchbox                 # Global search
 	com.redteamobile.roaming                # ORoaming
@@ -118,7 +119,6 @@ disable_system=(
 	com.oplus.lfeh                                   # Oplus LFEHer
 	com.oplus.linker                                 # OPSynergy
 	com.oplus.logkit                                 # Feedback
-	com.oplus.melody                                 # Wireless earphones (firmware updater for realme/oplus earphone)
 	com.oplus.ocloud                                 # Oplus cloud
 	com.oplus.olc                                    # Olc
 	com.oplus.onetrace                               # OneTrace
