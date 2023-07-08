@@ -49,6 +49,7 @@ uninstall_system=(
 	com.coloros.assistantscreen             # Shelf
 	com.coloros.compass2                    # Compass
 	com.coloros.filemanager                 # Filemanager
+	com.coloros.oshare                      # Realme share
 	com.coloros.phonemanager                # Phone manager
 	com.coloros.video                       # Video
 	com.coloros.weather2                    # Weather
@@ -96,7 +97,6 @@ disable_system=(
 	com.coloros.activation                           # E-warranty card
 	com.coloros.healthcheck                          # Diagnostics
 	com.coloros.operationManual                      # Help & feedback
-	com.coloros.oshare                               # Realme share
 	com.coloros.securepay                            # Payment protection
 	com.coloros.smartsidebar                         # Smart sidebar
 	com.coloros.weather.service                      # Weather service
