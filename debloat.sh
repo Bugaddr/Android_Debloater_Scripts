@@ -68,7 +68,6 @@ uninstall_system=(
 	com.google.android.calendar             # Google calendar
 	com.google.android.gm                   # Gmail
 	com.google.android.googlequicksearchbox # Google search
-	com.google.android.projection.gearhead  # Android auto
 	com.google.android.keep                 # Keep notes
 	com.google.android.youtube              # Youtube
 	com.google.ar.lens                      # Google lens
