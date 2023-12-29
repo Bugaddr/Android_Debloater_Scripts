@@ -2,7 +2,8 @@
 # Note: Enable usb debugging & Disable Permission Monitoring (To clear app data) in setting
 # This script debloats only for user 0, edit for other user
 
-# Get arguments
+# Get user id
+# e.g: ./debloat.sh 1
 USER_ID="$1"
 
 # App lists
