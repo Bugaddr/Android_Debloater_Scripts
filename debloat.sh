@@ -65,7 +65,6 @@ uninstall_system=(
 	com.google.android.apps.nbu.paisa.user  # Google pay
 	com.google.android.apps.photos          # Google photos
 	com.google.android.apps.restore         # Data restore tool
-	com.google.android.apps.wellbeing       # Digital wellbeing
 	com.google.android.calendar             # Google calendar
 	com.google.android.gm                   # Gmail
 	com.google.android.googlequicksearchbox # Google search
