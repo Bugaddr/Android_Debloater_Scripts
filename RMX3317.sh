@@ -46,6 +46,7 @@ uninstall_user=(
 )
 
 uninstall_system=(
+	com.applovin.array.apphub.vincere       # Apphub
 	com.android.chrome                      # Google chrome
 	com.coloros.assistantscreen             # Shelf
 	com.coloros.compass2                    # Compass
